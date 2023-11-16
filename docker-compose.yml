@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  bank-emulation:
+    container_name: 'bank-emulation'
+    restart: always
+    build: .
+    ports:
+      - "8189:8189"
+    environment:
+      - DB_HOST=127.0.0.1
+      - DB_PORT=3306
+      - DB_NAME=bank
+      - DB_USER=bank
+      - DB_PASSWORD=pass123qwe
